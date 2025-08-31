@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
 }
 
 // Send data to Google Sheets
-async function sendToGoogleSheets(data: any) {
+async function sendToGoogleSheets(data: Record<string, string>) {
   try {
     // Replace this URL with your Google Apps Script Web App URL
     const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL || 'YOUR_GOOGLE_SCRIPT_URL_HERE';
@@ -87,7 +87,7 @@ async function sendToGoogleSheets(data: any) {
 }
 
 // Email notification function
-async function sendEmailNotification(data: any) {
+async function sendEmailNotification(data: Record<string, string>) {
   console.log('📧 New form submission:');
   console.log('='.repeat(60));
   console.log(`👤 Name: ${data.fullName}`);

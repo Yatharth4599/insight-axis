@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import {
   ChatBubbleLeftRightIcon,
   PhoneIcon,
@@ -136,10 +136,10 @@ const lottieUrl = "https://assets2.lottiefiles.com/packages/lf20_2glqweqs.json";
 const AnimatedCounter = ({ value, label }: { value: number; label: string }) => {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    let start = 0;
+           const start = 0;
     const end = value;
     if (start === end) return;
-    let incrementTime = 18;
+           const incrementTime = 18;
     let current = start;
     const timer = setInterval(() => {
       current += Math.ceil(end / 60);
@@ -221,7 +221,7 @@ function TestimonialsCarousel() {
 export default function Home() {
   const [confetti, setConfetti] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
-  const [lottieData, setLottieData] = useState<any>(null);
+  const [lottieData, setLottieData] = useState<object | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
@@ -319,7 +319,7 @@ export default function Home() {
       >
         <div className="text-center mb-8">
           <h3 className="text-lg font-semibold text-textBlue mb-2">Trusted by Leading UAE Organizations</h3>
-          <p className="text-sm text-textGray opacity-80">Join industry leaders who've transformed their operations with our AI solutions</p>
+          <p className="text-sm text-textGray opacity-80">Join industry leaders who&apos;ve transformed their operations with our AI solutions</p>
         </div>
         <div className="glass rounded-2xl shadow-glow p-8">
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12">
@@ -550,7 +550,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               {/* Left Column - Benefits */}
               <div className="space-y-6">
-                <h3 className="text-xl font-bold text-textBlue mb-4">What You'll Get:</h3>
+                <h3 className="text-xl font-bold text-textBlue mb-4">What You&apos;ll Get:</h3>
                 <div className="space-y-4">
                   {[
                     { icon: <LightBulbIcon className="h-5 w-5" />, title: "Process Analysis", desc: "We'll identify automation opportunities in your current workflow" },
@@ -649,7 +649,7 @@ export default function Home() {
                     <label className="block text-sm font-medium text-textBlue mb-2">Biggest Challenge *</label>
                     <textarea 
                       name="challenge"
-                      placeholder="What's your biggest operational challenge? How much time do you spend on repetitive tasks?" 
+                      placeholder="What&apos;s your biggest operational challenge? How much time do you spend on repetitive tasks?" 
                       className="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 backdrop-blur focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none text-textGray placeholder-textGray/60 transition-all min-h-[100px] resize-none" 
                       required 
                       disabled={isSubmitting}
