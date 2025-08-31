@@ -82,7 +82,7 @@ async function sendToGoogleSheets(data: Record<string, string>) {
     
   } catch (error) {
     console.error('❌ Error sending to Google Sheets:', error);
-    return { success: false, error: error.toString() };
+    return { success: false, error: String(error) };
   }
 }
 
