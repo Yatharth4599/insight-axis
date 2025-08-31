@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F8FAFC;
+  --background-alt: #E5E7EB;
+  --primary-accent: #3B82F6;
+  --secondary-accent: #10B981;
+  --cta-orange: #F97316;
+  --cta-red: #EF4444;
+  --text-blue: #1E3A8A;
+  --text-gray: #1F2937;
+}
+
+/* Dynamic gradient background */
+.gradient-bg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Aurora background effect */
+.aurora-bg {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(16, 185, 129, 0.1) 25%, rgba(239, 68, 68, 0.1) 50%, rgba(249, 115, 22, 0.1) 75%, rgba(139, 92, 246, 0.1) 100%);
+  background-size: 600% 600%;
+  animation: aurora 20s ease infinite;
+}
+
+@keyframes aurora {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Enhanced shadows */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.shadow-glow-green {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(16, 185, 129, 0.1);
+}
+
+.shadow-glow-orange {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3), 0 0 40px rgba(249, 115, 22, 0.1);
+}
+
+/* Glassmorphism enhancements */
+.glass {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--background);
+  color: var(--text-gray);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  letter-spacing: -0.025em;
+  line-height: 1.6;
+}
+
+/* Enhanced typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+  color: var(--text-blue) !important;
+}
+
+p, span, div, li {
+  color: var(--text-gray) !important;
+}
+
+/* Override any white text */
+.text-white {
+  color: white !important;
+}
+
+/* Force button text to be visible */
+button, a[href] {
+  color: inherit !important;
+}
+
+/* Specifically for CTA buttons and colored backgrounds */
+.bg-ctaOrange, .bg-primary, .bg-secondary {
+  color: white !important;
+}
+
+.bg-ctaOrange *, .bg-primary *, .bg-secondary * {
+  color: white !important;
+}

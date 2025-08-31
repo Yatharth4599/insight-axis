@@ -1,0 +1,15 @@
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main axis shape -->
+  <rect x="10" y="10" width="160" height="20" rx="10" fill="#F8FAFC" stroke="#3B82F6" stroke-width="2"/>
+  <!-- Central node (AI/automation motif) -->
+  <circle cx="90" cy="20" r="9" fill="#10B981" stroke="#1E3A8A" stroke-width="2"/>
+  <!-- Orbiting nodes -->
+  <circle cx="40" cy="20" r="4" fill="#F97316"/>
+  <circle cx="140" cy="20" r="4" fill="#F97316"/>
+  <!-- Connecting lines -->
+  <line x1="49" y1="20" x2="81" y2="20" stroke="#3B82F6" stroke-width="2" stroke-dasharray="2 2"/>
+  <line x1="99" y1="20" x2="131" y2="20" stroke="#3B82F6" stroke-width="2" stroke-dasharray="2 2"/>
+  <!-- Brand mark: stylized "A" for Axis -->
+  <polygon points="120,32 125,12 130,32" fill="#1E3A8A"/>
+  <rect x="123.5" y="22" width="3" height="7" fill="#10B981"/>
+</svg> 

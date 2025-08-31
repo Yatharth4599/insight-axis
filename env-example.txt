@@ -1,0 +1,14 @@
+# Insight Axis LLP - Environment Variables
+# Copy this content to a file named .env.local and fill in your actual values
+
+# Google Apps Script Web App URL
+# Get this after deploying your Google Apps Script as a web app
+GOOGLE_SCRIPT_URL=YOUR_GOOGLE_SCRIPT_URL_HERE
+
+# Optional: Additional email settings (if you want to use other services)
+ADMIN_EMAIL=admin@insightaxisllp.com
+FROM_EMAIL=website@insightaxisllp.com
+
+# Optional: If you want to use external email services later
+# RESEND_API_KEY=your_resend_api_key
+# SENDGRID_API_KEY=your_sendgrid_api_key
